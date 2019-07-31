@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const config = require('config');
 // Validate that a user needs to enter Name, Email and Password:
 // See docs for more info on express validator: https://express-validator.github.io/docs/
 const { check, validationResult } = require('express-validator');
@@ -65,8 +67,26 @@ router.post(
       user.password = await bcrypt.hash(password, salt);
       await user.save();
       // Return the jsonwebtoken
+      // Visit https://jwt.io/ for specific info - first sign, then pass in payload
 
-      res.send('User registered');
+      const payload = {
+        user: {
+          // you don't need the underscore with mongoose - it uses abstraction
+          id: user.id
+        }
+      };
+
+      jwt.sign(
+        payload,
+        config.get('jwtSecret'),
+        {
+          expiresIn: 360000
+        },
+        (err, token) => {
+          if (err) throw err;
+          res.json({ token });
+        }
+      );
     } catch (err) {
       console.error(err.message);
       res.status(500).send('Server error');
