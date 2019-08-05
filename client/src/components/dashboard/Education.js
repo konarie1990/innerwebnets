@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import moment from 'moment';
 import { connect } from 'react-redux';
-
-// Using moment for the date - see docs
+import { deleteEducation } from '../../actions/profile';
 
 const Education = ({ education, deleteEducation }) => {
   const educations = education.map(edu => (
@@ -32,7 +31,7 @@ const Education = ({ education, deleteEducation }) => {
 
   return (
     <Fragment>
-      <h2 className='my-2'>Education</h2>
+      <h2 className='my-2'>Education Credentials</h2>
       <table className='table'>
         <thead>
           <tr>
@@ -49,8 +48,11 @@ const Education = ({ education, deleteEducation }) => {
 };
 
 Education.propTypes = {
-  experience: PropTypes.array.isRequired
-  // deleteExperience: PropTypes.func.isRequired
+  education: PropTypes.array.isRequired,
+  deleteEducation: PropTypes.func.isRequired
 };
 
-export default connect(null)(Education);
+export default connect(
+  null,
+  { deleteEducation }
+)(Education);
