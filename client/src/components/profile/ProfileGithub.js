@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import { getGithubRepos } from '../../actions/profile';
 
+// @todo - fix React Hook warning for useEffect
+
 const ProfileGithub = ({ username, getGithubRepos, repos }) => {
   useEffect(() => {
     getGithubRepos(username);

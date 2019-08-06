@@ -12,7 +12,7 @@ const CommentForm = ({ postId, addComment }) => {
         <h3>Leave a Comment</h3>
       </div>
       <form
-        className='form my-1'
+        className='form bg-dark my-1'
         onSubmit={e => {
           e.preventDefault();
           addComment(postId, { text });

@@ -16,10 +16,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <Spinner />
       ) : (
         <Fragment>
-          <h1 className='large text-primary'>
-            {' '}
-            <i className='fas fa-align-right' /> Developers
-          </h1>
+          <h1 className='large text-primary'> Developers</h1>
           {/* <p className='lead'>
             <i class='far fa-gem' /> Connect with other developers
           </p> */}

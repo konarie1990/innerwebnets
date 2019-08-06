@@ -8,7 +8,7 @@ const ProfileAbout = ({
     user: { name }
   }
 }) => (
-  <div className='profile-about bg-light p-2'>
+  <div className='profile-about bg-dark p-2'>
     {bio && (
       <Fragment>
         <h2 className='text-primary'>{name.trim().split(' ')[0]}'s Bio</h2>
@@ -20,7 +20,7 @@ const ProfileAbout = ({
     <div className='skills'>
       {skills.map((skill, index) => (
         <div key={index} className='p-1'>
-          <i className='fas fa-check' /> {skill}
+          <i class='fas fa-check-circle' /> {skill}
         </div>
       ))}
     </div>
