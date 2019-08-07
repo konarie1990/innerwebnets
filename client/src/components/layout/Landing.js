@@ -20,7 +20,11 @@ const Landing = ({ isAuthenticated }) => {
             <Link to='/register' className='btn btn-primary'>
               Get Started
             </Link>
-            <Link to='/login' className='btn'>
+            <Link
+              to='/login'
+              className='btn'
+              style={{ border: '1px solid var(--primary-color)' }}
+            >
               Login
             </Link>
           </div>

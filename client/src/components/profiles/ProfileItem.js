@@ -15,7 +15,7 @@ const ProfileItem = ({
     <div className='profile bg-dark'>
       <img src={avatar} alt='' className='round-img' />
       <div>
-        <h2>{name}</h2>
+        <h2 className='underLine'>{name}</h2>
         <p>
           {status} {company && <span> at {company}</span>}
         </p>
@@ -26,8 +26,8 @@ const ProfileItem = ({
       </div>
       <ul>
         {skills.slice(0, 4).map((skill, index) => (
-          <li key={index} className='text-primary'>
-            <i class='fas fa-check-circle' /> {skill}
+          <li key={index}>
+            <i class='fas fa-check-circle text-primary' /> {skill}
           </li>
         ))}
       </ul>
