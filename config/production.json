@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://ACAmongoDB:password1234@roncluster-otskm.mongodb.net/test?retryWrites=true",
+  "jwtSecret": "supersecrettoken",
+  "githubClientId": "dcf4bca72765240804aa",
+  "githubSecret": "7b3cc834161ebb16d0af9e1f8c10c90cdaa38623"
+}
