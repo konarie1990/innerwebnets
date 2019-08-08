@@ -170,6 +170,14 @@ img {
   color: #fff;
 }
 
+.btn-alt,
+.bg-alt,
+.badge-alt,
+.alert-alt {
+  border: 1px solid var(--alt-color);
+  color: #fff;
+}
+
 .btn-light,
 .bg-light,
 .badge-light,
@@ -182,7 +190,6 @@ img {
 .bg-dark,
 .badge-dark,
 .alert-dark {
-  border: 1px solid var(--alt-color);
   color: #fff;
 }
 
@@ -270,6 +277,12 @@ img {
 .form input[type='submit'],
 button {
   font: inherit;
+  background-color: var(--dark-color);
+}
+
+.form input[type='submit'],
+button:hover {
+  background-color: var(--alt-color);
 }
 
 .form .social-input {
@@ -408,7 +421,7 @@ button {
 }
 
 .profile-top .icons a:hover {
-  color: var(--dark-color);
+  color: var(--primary-color);
 }
 
 .profile-about {
@@ -490,6 +503,7 @@ button {
   grid-template-columns: 1fr 4fr;
   grid-gap: 2rem;
   align-items: center;
+  border: 1px solid var(--primary-color);
 }
 
 .post > div:first-child {
@@ -501,8 +515,8 @@ button {
 }
 
 .post .comment-count {
-  background: var(--light-color);
-  color: var(--primary-color);
+  background: var(--alt-color);
+  color: var(--light-color);
   padding: 0.1rem 0.2rem;
   border-radius: 5px;
   font-size: 0.8rem;

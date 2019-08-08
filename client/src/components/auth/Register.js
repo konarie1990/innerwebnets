@@ -4,6 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
+import LightSpeed from 'react-reveal/LightSpeed';
 
 // Destructure props by passing in {setAlert} object to Register function
 
@@ -60,11 +61,14 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   return (
     <Fragment>
-      <h1 className='large text-primary'>Sign Up</h1>
-      <p className='lead'>
-        <i className='fas fa-user-astronaut' />
-        Create Your Account
-      </p>
+      <LightSpeed left>
+        <h1 className='large text-primary'>Sign Up</h1>
+      </LightSpeed>
+      <LightSpeed right>
+        <p className='lead'>
+          <i className='fas fa-user-astronaut' /> Create Your Account
+        </p>
+      </LightSpeed>
       <form className='form' onSubmit={e => onSubmit(e)}>
         <div className='form-group'>
           <input
@@ -107,7 +111,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             // minLength='6'
           />
         </div>
-        <input type='submit' value='Register' className='btn btn-primary' />
+        <input type='submit' value='Register' className='btn btn-alt' />
       </form>
       <p className='my-1'>
         Already have an account? <Link to='/login'>Sign In</Link>

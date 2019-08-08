@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createProfile, getCurrentProfile } from '../../actions/profile';
+import LightSpeed from 'react-reveal/LightSpeed';
 
 const EditProfile = ({
   profile: { profile, loading },
@@ -72,10 +73,14 @@ const EditProfile = ({
 
   return (
     <Fragment>
-      <h1 className='large text-primary'>Edit Profile</h1>
-      <p className='lead'>
-        <i className='fas fa-user-astronaut' /> Update your profile info
-      </p>
+      <LightSpeed left>
+        <h1 className='large text-primary'>Edit Profile</h1>
+      </LightSpeed>
+      <LightSpeed right>
+        <p className='lead'>
+          <i className='fas fa-user-astronaut' /> Update your profile info
+        </p>
+      </LightSpeed>
       <small>* = required fields</small>
       <form className='form' onSubmit={e => onSubmit(e)}>
         <div className='form-group'>
@@ -169,11 +174,10 @@ const EditProfile = ({
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type='button'
-            className='btn btn-light'
+            className='btn btn-primary'
           >
             Add Social Network Links
           </button>
-          <span>Optional</span>
         </div>
 
         {displaySocialInputs && (
@@ -236,7 +240,7 @@ const EditProfile = ({
         )}
 
         <input type='submit' className='btn btn-primary my-1' />
-        <Link className='btn btn-light my-1' to='/dashboard'>
+        <Link className='btn btn-primary my-1' to='/dashboard'>
           Go Back
         </Link>
       </form>

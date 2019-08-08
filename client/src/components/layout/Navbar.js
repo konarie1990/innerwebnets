@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
+import Zoom from 'react-reveal/Zoom';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
@@ -30,25 +31,29 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   const guestLinks = (
     <ul>
-      <li>
-        <Link to='/profiles'>Developers</Link>
-      </li>
-      <li>
-        <Link to='/register'>Register</Link>
-      </li>
-      <li>
-        <Link to='/login'>Login</Link>
-      </li>
+      <Zoom right>
+        <li>
+          <Link to='/profiles'>Developers</Link>
+        </li>
+        <li>
+          <Link to='/register'>Register</Link>
+        </li>
+        <li>
+          <Link to='/login'>Login</Link>
+        </li>
+      </Zoom>
     </ul>
   );
 
   return (
     <nav className='navbar bg-dark'>
-      <h1>
-        <Link to='/'>
-          <i className='fas fa-align-right' /> innerwebnets
-        </Link>
-      </h1>
+      <Zoom left>
+        <h1>
+          <Link to='/'>
+            <i className='fas fa-align-right' /> innerwebnets
+          </Link>
+        </h1>
+      </Zoom>
       {!loading && (
         <Fragment>{isAuthenticated ? authLinks : guestLinks} </Fragment>
       )}

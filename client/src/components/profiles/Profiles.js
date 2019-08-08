@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import ProfileItem from './ProfileItem';
 import { getProfiles } from '../../actions/profile';
+import LightSpeed from 'react-reveal/LightSpeed';
 
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
@@ -16,7 +17,9 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <Spinner />
       ) : (
         <Fragment>
-          <h1 className='large text-primary'> Developers</h1>
+          <LightSpeed left>
+            <h1 className='large text-primary'> Developers</h1>
+          </LightSpeed>
           {/* <p className='lead'>
             <i class='far fa-gem' /> Connect with other developers
           </p> */}

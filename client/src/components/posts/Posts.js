@@ -5,6 +5,7 @@ import Spinner from '../layout/Spinner';
 import PostItem from './PostItem';
 import PostForm from './PostForm';
 import { getPosts } from '../../actions/post';
+import LightSpeed from 'react-reveal/LightSpeed';
 
 const Posts = ({ getPosts, post: { posts, loading } }) => {
   useEffect(() => {
@@ -15,10 +16,14 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
     <Spinner />
   ) : (
     <Fragment>
-      <h1 className='large text-primary'>Community</h1>
-      <p className='lead'>
-        <i class='fas fa-user-astronaut' /> Welcome to the community
-      </p>
+      <LightSpeed left>
+        <h1 className='large text-primary'>Community</h1>
+      </LightSpeed>
+      <LightSpeed right>
+        <p className='lead'>
+          <i class='fas fa-user-astronaut' /> Welcome to the community
+        </p>
+      </LightSpeed>
       <PostForm />
       <div className='posts'>
         {posts.map(post => (

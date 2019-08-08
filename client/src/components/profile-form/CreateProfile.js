@@ -3,6 +3,7 @@ import { Link, withRouter, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createProfile, getCurrentProfile } from '../../actions/profile';
+import LightSpeed from 'react-reveal/LightSpeed';
 
 const Createprofile = ({
   createProfile,
@@ -53,11 +54,15 @@ const Createprofile = ({
     <Redirect to='/dashboard' />
   ) : (
     <Fragment>
-      <h1 className='large text-primary'>Create Your Profile</h1>
-      <p className='lead'>
-        <i className='fas fa-user' /> Let's get some information to make your
-        profile stand out
-      </p>
+      <LightSpeed left>
+        <h1 className='large text-primary'>Create A Profile</h1>
+      </LightSpeed>
+      <LightSpeed right>
+        <p className='lead'>
+          <i className='fas fa-user' /> Let's get some information to make your
+          profile stand out
+        </p>
+      </LightSpeed>
       <small>* = required field</small>
       <form className='form' onSubmit={e => onSubmit(e)}>
         <div className='form-group'>
@@ -66,9 +71,10 @@ const Createprofile = ({
             <option value='Developer'>Developer</option>
             <option value='Junior Developer'>Junior Developer</option>
             <option value='Senior Developer'>Senior Developer</option>
+            <option value='Dev Ops'>Dev Ops</option>
             <option value='Manager'>Manager</option>
-            <option value='Student or Learning'>Student or Learning</option>
-            <option value='Instructor'>Instructor or Teacher</option>
+            <option value='Student or Learning'>Student</option>
+            <option value='Instructor'>Instructor</option>
             <option value='Intern'>Intern</option>
             <option value='Other'>Other</option>
           </select>
@@ -150,11 +156,10 @@ const Createprofile = ({
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type='button'
-            className='btn btn-light'
+            className='btn btn-primary'
           >
             Add Social Network Links
           </button>
-          <span>Optional</span>
         </div>
         {displaySocialInputs && (
           <Fragment>
@@ -211,7 +216,7 @@ const Createprofile = ({
           </Fragment>
         )}
         <input type='submit' className='btn btn-primary my-1' />
-        <Link className='btn btn-light my-1' to='/dashboard'>
+        <Link className='btn btn-primary my-1' to='/dashboard'>
           Go Back
         </Link>
       </form>

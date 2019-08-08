@@ -7,6 +7,7 @@ import DashboardActions from './DashboardActions';
 import Experience from './Experience';
 import Education from './Education';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
+import LightSpeed from 'react-reveal/LightSpeed';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -22,10 +23,14 @@ const Dashboard = ({
     <Spinner />
   ) : (
     <Fragment>
-      <h1 className='large text-primary'>Dashboard</h1>
-      <p className='lead'>
-        <i className='fas fa-user-astronaut' /> Welcome {user && user.name}
-      </p>
+      <LightSpeed left>
+        <h1 className='large text-primary'>Dashboard</h1>
+      </LightSpeed>
+      <LightSpeed right>
+        <p className='lead'>
+          <i className='fas fa-user-astronaut' /> Welcome {user && user.name}
+        </p>
+      </LightSpeed>
       {profile !== null ? (
         <Fragment>
           <DashboardActions />

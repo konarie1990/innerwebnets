@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addEducation } from '../../actions/profile';
+import LightSpeed from 'react-reveal/LightSpeed';
 
 const AddEducation = ({ addEducation, history }) => {
   const [formData, setFormData] = useState({
@@ -32,11 +33,15 @@ const AddEducation = ({ addEducation, history }) => {
 
   return (
     <Fragment>
-      <h1 className='large text-primary'>Add Your Education</h1>
-      <p className='lead'>
-        <i className='fas fa-code-branch text-alt' /> Add any school or bootcamp
-        you attended
-      </p>
+      <LightSpeed left>
+        <h1 className='large text-primary'>Add Education</h1>
+      </LightSpeed>
+      <LightSpeed right>
+        <p className='lead'>
+          <i class='fas fa-glasses text-alt' /> Add any school or bootcamp you
+          attended
+        </p>
+      </LightSpeed>
       <small>* = required field</small>
       <form
         className='form'
@@ -119,7 +124,7 @@ const AddEducation = ({ addEducation, history }) => {
           />
         </div>
         <input type='submit' className='btn btn-primary my-1' />
-        <Link className='btn btn-light my-1' to='/dashboard'>
+        <Link className='btn btn-primary my-1' to='/dashboard'>
           Go Back
         </Link>
       </form>
