@@ -540,7 +540,8 @@ button:hover {
 
   /* Text Styles */
   .x-large {
-    font-size: 3rem;
+    /* font-size: 3rem; */
+    font-size: 10vw;
   }
 
   .large {
@@ -564,6 +565,7 @@ button:hover {
 
   .navbar h1 {
     margin-bottom: 1rem;
+    font-size: 7vw;
   }
 
   .navbar .welcome {

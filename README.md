@@ -8,7 +8,7 @@ Among all the resources I used to build 'innerwebnets', there are a few that I w
 
 #### Austin Coding Academy: I joined ACA in August 2018 with very little knowledge of web development. Over the past year I learned the fundamentals HTML, CSS, and JavaScript - as well as MERN stack technologies MongoDB (Atlas), Express.js, REACT, Node.js. Other technologies I used during the course include git, github, npm, Redux, thunk, mongoose, nodemon, React Router, Axios, concurrently, JSON web token, and OAuth.
 
-#### Traversy University: I took several of Brad Traversy's courses in addition to my training at ACA to learn more about React, Redux and building full stack web applications in general. This project was based on his "MERN Stack Front to Back" course where he builds a full stack social network application. I would not have been able to complete this course if it were not for my training at ACA which is why it comes second.
+#### Traversy University: I took several of Brad Traversy's on-line courses in addition to my training at ACA to learn more about React, Redux and building full stack web applications. This project was based on the "MERN Stack Front to Back" course where you learn the details on how to build a full stack social network application. I would not have been able to complete advanced courses like this if it were not for my training at ACA.
 
 #### Websites:
 
