@@ -141,7 +141,7 @@ img {
   border: none;
   cursor: pointer;
   margin-right: 0.5rem;
-  transition: opacity 0.2s ease-in;
+  transition: opacity 0.15s ease-in;
   outline: none;
 }
 
@@ -282,7 +282,7 @@ button {
 
 .form input[type='submit'],
 button:hover {
-  background-color: var(--alt-color);
+  background-color: var(--primary-color);
 }
 
 .form .social-input {
@@ -330,8 +330,8 @@ button:hover {
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 1px var(--primary-color);
-  opacity: 0.9;
+  border-bottom: solid 0.7px var(--alt-color);
+  opacity: 0.7;
 }
 
 .navbar ul {

@@ -111,7 +111,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             // minLength='6'
           />
         </div>
-        <input type='submit' value='Register' className='btn btn-alt' />
+        <input type='submit' value='Register' className='btn btn-primary' />
       </form>
       <p className='my-1'>
         Already have an account? <Link to='/login'>Sign In</Link>

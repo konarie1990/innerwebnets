@@ -60,7 +60,7 @@ const Login = ({ login, isAuthenticated }) => {
             minLength='6'
           />
         </div>
-        <input type='submit' value='Login' className='btn btn-alt' />
+        <input type='submit' value='Login' className='btn btn-primary' />
       </form>
       <p className='my-1'>
         Don't have an account? <Link to='/register'>Sign Up</Link>
