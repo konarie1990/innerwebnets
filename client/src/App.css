@@ -330,7 +330,14 @@ button:hover {
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 0.7px var(--alt-color);
+  background: repeating-linear-gradient(
+    43deg,
+    rgba(104, 104, 104, 0.63) 50px,
+    rgba(151, 185, 201, 0.397) 420px,
+    rgba(104, 104, 104, 0.575) 760px,
+    rgba(102, 130, 148, 0.596) 90px
+  );
+  /* border-bottom: solid 0.7px var(--alt-color); */
   opacity: 0.7;
 }
 
